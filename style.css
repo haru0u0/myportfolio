@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:rgb(252, 255, 255);
+  background-image:
+   radial-gradient(at 40% 20%, rgb(100, 165, 218) 0px, transparent 50%),
+   radial-gradient(at 80% 0%, rgb(90, 203, 255) 0px, transparent 50%),
+   radial-gradient(at 0% 50%, rgb(177, 233, 250) 0px, transparent 50%),
+   radial-gradient(at 80% 50%, rgb(98, 191, 197) 0px, transparent 50%),
+   radial-gradient(at 0% 100%, rgb(176, 234, 241) 0px, transparent 50%),
+   radial-gradient(at 80% 100%, rgb(249, 249, 255) 0px, transparent 50%),
+   radial-gradient(at 0% 0%, rgb(141, 159, 207) 0px, transparent 50%),
+   url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.grid-container.menu{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-left:100px;
+    margin-right: 100px;
+    height: 5vh;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.grid-item.flex-container{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.flex-container{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+  
+.grid-container.body{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-left: 100px;
+    margin-right: 100px;
+    gap: 20px;
+    height: 90vh;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.grid-item{
+    backdrop-filter: blur(5px); 
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 30px; 
+    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -10px -10px 20px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    text-align: center;
+}
+
+.two-by-two{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.two-by-one{
+    grid-column: span 2;
+}
+
+.one-by-two{
+    grid-row: span 2;
+}
+
+.footer{
+    height: 5vh;
+    box-sizing: border-box;
+}

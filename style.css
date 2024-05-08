@@ -1,5 +1,5 @@
 :root {
-    --menu-height: 10vh;
+    --menu-height: 5vh;
     --footer-height: 5vh;
     --body-height: calc(100vh - var(--menu-height) - var(--footer-height));
     color: rgb(35, 67, 94);
@@ -15,8 +15,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: rgb(100, 165, 218);
-    /*background-image:
+    background-color: #b6e2f8;
+    background-image:
         radial-gradient(at 40% 20%, rgb(100, 165, 218) 0px, transparent 50%),
         radial-gradient(at 80% 0%, rgb(90, 203, 255) 0px, transparent 50%),
         radial-gradient(at 0% 50%, rgb(177, 233, 250) 0px, transparent 50%),
@@ -25,7 +25,7 @@ body {
         radial-gradient(at 80% 100%, rgb(249, 249, 255) 0px, transparent 50%),
         radial-gradient(at 0% 0%, rgb(141, 159, 207) 0px, transparent 50%),
         url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        */
+
 }
 
 h2 {
@@ -38,7 +38,6 @@ img {
 
 .grid-container {
     display: grid;
-
 }
 
 .grid-item {
@@ -102,13 +101,20 @@ button.open {
     box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -10px -10px 20px 0px rgb(208, 51, 158, 1), inset 0px 11px 28px 0px rgb(255, 255, 255);
     backdrop-filter: blur(5px);
     border: 0px;
+    backdrop-filter: blur(5px);
+
+    background-color: rgba(255, 255, 255, 1);
+
+    border-radius: 26px;
+
+    box-shadow: 35px 35px 68px 0px rgba(255, 177, 206, 0.5), inset -8px -8px 16px 0px rgba(255, 177, 206, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
 
 button.open>i {
     color: white;
 }
 
-button.open:hover {
+button.open_hovered {
     float: right;
     display: flex;
     justify-content: center;

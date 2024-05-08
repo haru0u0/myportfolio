@@ -23,7 +23,7 @@
         </div>
     </div>
     <div id="main" class="grid-container">
-        <div id="me" class="grid-item two-by-two about">
+        <div id="me" class="grid-item two-by-two about withtext">
             <div class="column-flex-container">
                 <div>
                     <button type="button" class="open">
@@ -34,24 +34,24 @@
                 <div class="content">
                     <div class=" row-flex-container">
                         <img class="img" height="200px" src="profile.jpg">
-                        <p>A web application to generate reference list for academic paper based on
+                        <p class="overview">A web application to generate reference list for academic paper based on
                             Notion DB.A web application to generate reference list for academic paper based on
                             Notion DB.flex-container</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="libft" class="grid-item one-by-one work">
+        <div id="libft" class="grid-item one-by-one work withtext">
             <button type="button" class="open">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
             </button>
             <div class="content">
                 <h2>Libft</h2>
                 <p class="tags">C</p>
-                <p>My own library.</p>
+                <p class="overview">My own library.</p>
             </div>
         </div>
-        <div id="journal" class="grid-item one-by-two work">
+        <div id="journal" class="grid-item one-by-two work withtext">
             <button type="button" class="open">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
             </button>
@@ -59,20 +59,21 @@
                 <h2>Journal</h2>
                 <p class="tags">Node.js / React </p>
                 <img height="70px" src="https://www.granfairs.com/blog/upload/staff-2017-03-09-centering-by-css-07.png">
-                <p>A web application that enable English learners keep English diary and receive feedback.</p>
+                <p class="overview">A web application that enable English learners keep English diary and receive
+                    feedback.</p>
             </div>
         </div>
-        <div id="blog" class="grid-item one-by-one work">
+        <div id="blog" class="grid-item one-by-one work withtext">
             <button type="button" class="open">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
             </button>
             <div class="content">
                 <h2>Blog</h2>
                 <p class="tags">React/Typescript/Next.js/Vercel</p>
-                <p>Blog Site</p>
+                <p class="overview">Blog Site</p>
             </div>
         </div>
-        <div id="reftion" class="grid-item one-by-two work">
+        <div id="reftion" class="grid-item one-by-two work withtext">
             <button type="button" class="open">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
             </button>
@@ -80,18 +81,18 @@
                 <h2>Reftion</h2>
                 <p class="tags">PHP(Laravel) / HTML / CSS</p>
                 <img height="70px" src="https://www.granfairs.com/blog/upload/staff-2017-03-09-centering-by-css-07.png">
-                <p>A web application to generate reference list for academic paper based on
+                <p class="overview">A web application to generate reference list for academic paper based on
                     Notion DB.</p>
             </div>
         </div>
-        <div id="folio" class="grid-item one-by-one work">
+        <div id="folio" class="grid-item one-by-one work withtext">
             <button type="button" class="open">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
             </button>
             <div class="content">
                 <h2>Portfolio</h2>
                 <p class="tags">HTML / CSS / Vanilla JS</p>
-                <p>Portfolio.</p>
+                <p class="overview">Portfolio.</p>
             </div>
         </div>
         <div id="link" class="grid-item two-by-one row-flex-container about">
@@ -110,7 +111,10 @@
             </iframe>
         </div>
         <div id="lang" class="grid-item one-by-one">
-            Toggle
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
     <div id="footer" class="row-flex-container">

@@ -17,7 +17,10 @@ async function setLang(selected_lang) {
     const response = await fetch('content.json');
     const contents = await response.json();
     var grid_item2 = document.querySelectorAll(".withtext");
+    var toggle_lang = document.querySelector("#selected_lang");
     var indx_grid2 = 0;
+
+    toggle_lang.innerHTML = selected_lang.toUpperCase();
     
     while (indx_grid2 < grid_item2.length) {
         var title = grid_item2[indx_grid2].getAttribute("id");

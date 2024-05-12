@@ -99,6 +99,7 @@ a {
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: space-around;
 }
 
 .overview {
@@ -220,10 +221,6 @@ button.open_hovered {
     box-sizing: border-box;
 }
 
-#spotify {
-    padding: 0px;
-}
-
 #me>.img {
     margin-right: 10px;
 }
@@ -237,9 +234,6 @@ button.open_hovered {
     height: 100%;
 }
 
-#me>.h2 {
-    overflow-wrap: anywhere;
-}
 
 #footer {
     position: fixed;
@@ -330,6 +324,11 @@ button.open_hovered {
     background-size: 90%;
 }
 
+#fluentry {
+    background-image: url("img/fluentry/thm.png");
+    background-size: 90%;
+}
+
 .work>.content {
     display: none;
 }
@@ -352,4 +351,41 @@ button.open_hovered {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+
+#songs {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.song {
+    gap: 10px;
+    justify-content: center;
+}
+
+.icons {
+    text-align: center;
+    cursor: default;
+}
+
+.hidden {
+    display: none;
+}
+
+.song-name {
+    font-size: small;
+}
+
+.artist-name {
+    color: rgb(35, 67, 94, 0.7);
+    font-size: small;
+}
+
+.song>img {
+    border-radius: 30%;
+    border: rgb(35, 67, 94, 0.2) solid 1px;
+}
+
+.music-button {
+    cursor: pointer;
 }

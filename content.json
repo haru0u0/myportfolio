@@ -3,76 +3,38 @@
   {
     "id": 0,
     "title":"me",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
+    "en": "I have an extensive background in web development within the digital learning sector. I previously held a position as a technical project manager for over 2 years, overseeing the development of online learning platforms. In my current role as a digital learning coordinator, I actively utilize HTML, CSS, and JavaScript to design an online learning platform and create a digital learning material.",
+    "jp": "オンライン教育分野での職務/学術バックグラウンドを持つ、フロントエンドエンジニアです。"
   },
   {
     "id": 1,
     "title":"libft",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
+    "en": "My own C library replicating frequently used C functions",
+    "jp": "C言語の標準関数を複製したCライブラリ"
   },
   {
     "id": 2,
-    "title":"journal",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
+    "title":"fluentry",
+    "en": "An English journaling web application designed specifically to enhance the fluency of English learners. *Currently under development",
+    "jp": "英語学習者の流暢さ向上を目的とした日記アプリ"
   },
   {
     "id": 3,
     "title":"blog",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
+    "en": "A statically generated blog from Markdown files.",
+    "jp": "Markdownで書く静的生成ブログ"
   },
   {
     "id": 4,
     "title":"reftion",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
+    "en": "A web application to generate a reference list for an academic paper based on information on user's Notion database.",
+    "jp": "Notionのデータベースの内容を基に学術論文の参考文献リストを出力するWebアプリケーション"
   },
   {
     "id": 5,
     "title":"folio",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
-  }
-],
-"details": [
-  {
-    "id": 0,
-    "title":"me",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
-  },
-  {
-    "id": 1,
-    "title":"libft",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
-  },
-  {
-    "id": 2,
-    "title":"journal",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
-  },
-  {
-    "id": 3,
-    "title":"blog",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
-  },
-  {
-    "id": 4,
-    "title":"reftion",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
-  },
-  {
-    "id": 5,
-    "title":"folio",
-    "en": "A web application to generate reference list for academic paper based on Notion DB.",
-    "jp": "NotionDBを基に学術論文用参考文献リストを生成するWebアプリケーション"
+    "en": "Yes, this is what you are seeing now🥰 Thank you for visiting!",
+    "jp": "本ポートフォリオサイト"
   }
 ]
 }

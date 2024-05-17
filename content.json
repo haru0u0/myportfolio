@@ -3,8 +3,8 @@
   {
     "id": 0,
     "title":"me",
-    "en": "I have an extensive background in web development within the digital learning sector. I previously held a position as a technical project manager for over 2 years, overseeing the development of online learning platforms. In my current role as a digital learning coordinator, I actively utilize HTML, CSS, and JavaScript to design an online learning platform and create a digital learning material.",
-    "jp": "オンライン教育分野での職務/学術バックグラウンドを持つ、フロントエンドエンジニアです。"
+    "en": "Having extensive experience in Edtech field. Skilled in C, HTML, CSS, Javascript, UX design and project management. Advocate for digital inclusion and educational equity🤞🏻",
+    "jp": "Edtech関連の経験が豊富です。C, HTML, CSS, Javascript, UXデザイン, プロジェクトマネジメントが得意です。インクルーシブなデジタル環境をつくることと、教育を通じてすべての人の自己実現を支えることに関心があります🫂"
   },
   {
     "id": 1,
@@ -16,13 +16,13 @@
     "id": 2,
     "title":"fluentry",
     "en": "An English journaling web application designed specifically to enhance the fluency of English learners. *Currently under development",
-    "jp": "英語学習者の流暢さ向上を目的とした日記アプリ"
+    "jp": "英語学習者の流暢さ向上を目的とした日記アプリ　*現在開発中"
   },
   {
     "id": 3,
     "title":"blog",
     "en": "A statically generated blog from Markdown files.",
-    "jp": "Markdownで書く静的生成ブログ"
+    "jp": "Markdownで書くブログ"
   },
   {
     "id": 4,
@@ -34,7 +34,7 @@
     "id": 5,
     "title":"folio",
     "en": "Yes, this is what you are seeing now🥰 Thank you for visiting!",
-    "jp": "本ポートフォリオサイト"
+    "jp": "本ポートフォリオサイト。訪問ありがとうございます！"
   }
 ]
 }

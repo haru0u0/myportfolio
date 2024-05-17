@@ -76,4 +76,27 @@ function display(data) {
     });
     song_indx++;
   }
+
+  var songs1 = document.querySelector("#songs1");
+  var songs2 = document.querySelector("#songs2");
+
+  songs1.addEventListener("mouseover", function () {
+    songs1.style.animationPlayState = "paused";
+    songs2.style.animationPlayState = "paused";
+  });
+
+  songs2.addEventListener("mouseover", function () {
+    songs1.style.animationPlayState = "paused";
+    songs2.style.animationPlayState = "paused";
+  });
+
+  songs1.addEventListener("mouseout", function () {
+    songs1.style.animationPlayState = "";
+    songs2.style.animationPlayState = "";
+  });
+
+  songs2.addEventListener("mouseout", function () {
+    songs1.style.animationPlayState = "";
+    songs2.style.animationPlayState = "";
+  });
 }

@@ -15,6 +15,23 @@
 </head>
 
 <body>
+
+    <div id="header" class="grid-container">
+        <div id="me" class="grid-item two-by-two about withtext">
+            <div class="content row-flex-container">
+                <img class="img" src="img/profile.jpg">
+                <div class="">
+                    <h2>Hi👋 I am Haruka, a developer & technical project manager💻 with a heart for education📚!</h2>
+                    <p class="overview"></p>
+                    <button type="button" class="open">
+                        more about ME👀 &nbsp;&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div id="menu" class="grid-container">
         <div class="grid-item grid-container">
             <div id="about" class="grid-item">ABOUT</div>
@@ -23,22 +40,6 @@
         </div>
     </div>
     <div id="main" class="grid-container">
-        <div id="me" class="grid-item two-by-two about withtext">
-            <div class="column-flex-container">
-                <div>
-                    <button type="button" class="open">
-                        <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
-                    </button>
-                    <h2>Hi👋 I am Haruka, a frontend developer💻 with a heart for education📚!
-                </div>
-                <div class="content">
-                    <div class=" row-flex-container">
-                        <img class="img" height="200px" src="profile.jpg">
-                        <p class="overview"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="libft" class="grid-item one-by-one work withtext">
             <button type="button" class="open">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-lg"></i>
@@ -55,7 +56,7 @@
             </button>-->
             <div class="content">
                 <h2>fluENtry</h2>
-                <p class="tags">Node.js</p>
+                <p class="tags"></p>
                 <p class="overview">.</p>
             </div>
         </div>
@@ -65,7 +66,7 @@
             </button>
             <div class="content">
                 <h2>haru blog.</h2>
-                <p class="tags">Next.js / TypeScript / Tailwindcss / Vercel</p>
+                <p class="tags">Next.js / TypeScript / Tailwind CSS / Vercel</p>
                 <p class="overview"></p>
             </div>
         </div>
@@ -95,17 +96,21 @@
             </h2>
             <div id="links">
                 <div id="icons">
-                    <a target="_blank" href="https://www.linkedin.com/in/haruka-senzaki/">
+                    <a class="contact" target="_blank" href="https://www.linkedin.com/in/haruka-senzaki/">
                         <i class="fa-brands fa-linkedin fa-xl"></i>
                     </a>
-                    <i class="fa-solid fa-file-lines fa-xl"></i>
-                    <a target="_blank" href="https://twitter.com/haru0u0_">
+                    <a class="contact" target="_blank" href="https://www.linkedin.com/in/haruka-senzaki/">
+                        <i class="fa-solid fa-file-lines fa-xl"></i>
+                    </a>
+                    <a class="contact" target="_blank" href="https://twitter.com/haru0u0_">
                         <i class="fa-brands fa-x-twitter fa-xl"></i>
                     </a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="rgb(35, 67, 94)"
-                            d="M.264 23.771h4.984a.8.8 0 0 0 .645-.352L19.614.874c.176-.293-.029-.645-.381-.645h-4.72a.63.63 0 0 0-.557.323L.03 23.361c-.088.176.029.41.234.41m17.181-.352l6.479-10.408a.477.477 0 0 0-.41-.733h-4.691a.52.52 0 0 0-.44.235l-6.655 10.643c-.176.264.029.616.352.616h4.779a.65.65 0 0 0 .586-.353" />
-                    </svg>
+                    <a class="contact" target="_blank" href="https://twitter.com/haru0u0_">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M.264 23.771h4.984a.8.8 0 0 0 .645-.352L19.614.874c.176-.293-.029-.645-.381-.645h-4.72a.63.63 0 0 0-.557.323L.03 23.361c-.088.176.029.41.234.41m17.181-.352l6.479-10.408a.477.477 0 0 0-.41-.733h-4.691a.52.52 0 0 0-.44.235l-6.655 10.643c-.176.264.029.616.352.616h4.779a.65.65 0 0 0 .586-.353" />
+                        </svg>
+                    </a>
                 </div>
                 <div id="email">
                     <i class="fa-regular fa-envelope fa-lg"></i>
@@ -119,56 +124,99 @@
                     <h2>Haruka's current on-repeat tracks 🔁🎶</h2>
                     <div class="tags">Data fetching live from Spotify</div>
                 </div>
-                <div id="songs" class="grid-container">
-                    <div class="song row-flex-container">
-                        <div class="icons">
-                            🥇
-                            <div class="music-button">
-                                <i class="fa-regular fa-circle-play"></i>
-                                <i class="fa-solid fa-circle-pause hidden"></i>
+                <div class="scrl" style="display:flex;">
+                    <ul id="songs1" class="row-flex-container">
+                        <li class="song row-flex-container">
+                            <div class="icons">
+                                🥇
+                                <div class="music-button">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <i class="fa-solid fa-circle-pause hidden"></i>
+                                </div>
                             </div>
-                        </div>
-                        <img src="" height="50px">
-                        <div>
-                            <p class="song-name"></p>
-                            <p class="artist-name"></p>
-                        </div>
-                    </div>
-                    <div class="song row-flex-container">
-                        <div class="icons">
-                            🥈
-                            <div class="music-button">
-                                <i class="fa-regular fa-circle-play"></i>
-                                <i class="fa-solid fa-circle-pause hidden"></i>
+                            <img src="">
+                            <div>
+                                <p class="song-name"></p>
+                                <p class="artist-name"></p>
                             </div>
-                        </div>
-                        <img src="" height="50px">
-                        <div>
-                            <p class="song-name"></p>
-                            <p class="artist-name"></p>
-                        </div>
-                    </div>
-                    <div class="song row-flex-container">
-                        <div class="icons">
-                            🥉
-                            <div class="music-button">
-                                <i class="fa-regular fa-circle-play"></i>
-                                <i class="fa-solid fa-circle-pause hidden"></i>
+                        </li>
+                        <li class="song row-flex-container">
+                            <div class="icons">
+                                🥈
+                                <div class="music-button">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <i class="fa-solid fa-circle-pause hidden"></i>
+                                </div>
                             </div>
-                        </div>
-                        <img src="" height="50px">
-                        <div>
-                            <p class="song-name"></p>
-                            <p class="artist-name"></p>
-                        </div>
-                    </div>
+                            <img src="" height="50px">
+                            <div>
+                                <p class="song-name"></p>
+                                <p class="artist-name"></p>
+                            </div>
+                        </li>
+                        <li class="song row-flex-container">
+                            <div class="icons">
+                                🥉
+                                <div class="music-button">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <i class="fa-solid fa-circle-pause hidden"></i>
+                                </div>
+                            </div>
+                            <img src="" height="50px">
+                            <div>
+                                <p class="song-name"></p>
+                                <p class="artist-name"></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="songs2" class="row-flex-container">
+                        <li class="song row-flex-container">
+                            <div class="icons">
+                                <div class="music-button">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <i class="fa-solid fa-circle-pause hidden"></i>
+                                </div>
+                            </div>
+                            <img src="" height="50px">
+                            <div>
+                                <p class="song-name"></p>
+                                <p class="artist-name"></p>
+                            </div>
+                        </li>
+                        <li class="song row-flex-container">
+                            <div class="icons">
+                                <div class="music-button">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <i class="fa-solid fa-circle-pause hidden"></i>
+                                </div>
+                            </div>
+                            <img src="" height="50px">
+                            <div>
+                                <p class="song-name"></p>
+                                <p class="artist-name"></p>
+                            </div>
+                        </li>
+                        <li class="song row-flex-container">
+                            <div class="icons">
+                                <div class="music-button">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                    <i class="fa-solid fa-circle-pause hidden"></i>
+                                </div>
+                            </div>
+                            <img src="" height="50px">
+                            <div>
+                                <p class="song-name"></p>
+                                <p class="artist-name"></p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div id="lang" class="grid-item one-by-one">
             <div class="toggle">
-                <p id="jp">JP</p>
                 <p id="en">EN</p>
+                <p id="jp">JP</p>
                 <label class="dot">
                     <p id="selected_lang">JP</p>
                     <input type="checkbox">
@@ -177,7 +225,11 @@
         </div>
     </div>
     <div id="footer" class="row-flex-container">
-        @2024 haru
+        @2024 haruka senzaki
+    </div>
+    <div id="alert">
+        For the best experience, please browse on a laptop where available.
+        このサイトはPCでの閲覧に最適化されています。
     </div>
     <div id="myModal" class="modal">
         <div class="modal-content">

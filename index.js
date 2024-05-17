@@ -1,5 +1,5 @@
 // lang switch
-var selected_lang = "jp";
+var selected_lang = "en";
 window.addEventListener("load", function () {
   setLang(selected_lang);
 });
@@ -45,7 +45,7 @@ var btn_close = document.querySelector(".close");
 var indx_btn = 0;
 
 function icon_hover() {
-  this.classList.add("fa-shake", "open_hovered");
+  this.classList.add("open_hovered");
 }
 
 function icon_hover_bind() {
@@ -57,7 +57,7 @@ while (indx_btn < btn_open.length) {
   btn_open[indx_btn].addEventListener("mouseover", icon_hover_bind);
 
   btn_open[indx_btn].addEventListener("mouseout", function (e) {
-    this.classList.remove("fa-shake", "open_hovered");
+    this.classList.remove("open_hovered");
   });
 
   btn_open[indx_btn].addEventListener("click", function (e) {
@@ -97,24 +97,6 @@ while (work_grid_items_index < work_grid_items.length) {
   work_grid_items_index++;
 }
 
-/*
-while (work_grid_items_index < work_grid_items.length) {
-  work_grid_items[work_grid_items_index].addEventListener(
-    "mouseover", 
-    function () {
-      var children = this.querySelectorAll("*");
-      var children_index = 0;
-      while (children_index < children.length) {
-        children[children_index].style.display = "block";
-        children_index++;
-      }
-      this.style.backgroundImage = "none";
-    }
-  );
-  work_grid_items_index++;
-}
-*/
-
 work_grid_items_index = 0;
 
 while (work_grid_items_index < work_grid_items.length) {
@@ -132,12 +114,6 @@ while (work_grid_items_index < work_grid_items.length) {
   );
   work_grid_items_index++;
 }
-
-/*
-document.querySelector("#me").addEventListener("mouseout", function () {
-    document.querySelector("#me>*").style.display = "none";
-});
-*/
 
 //filtering
 

@@ -200,8 +200,8 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    margin: 100px;
-    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .modal h2 {
@@ -615,6 +615,7 @@ a {
         gap: 30px;
         margin: 50px;
         margin-top: 20px;
+        margin-bottom: 100px;
     }
 
     #menu {

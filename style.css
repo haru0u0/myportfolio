@@ -3,7 +3,10 @@
     --footer-height: 5vh;
     --main-height: calc(100% - var(--menu-height) - var(--footer-height));
     --grid-height: calc(var(--main-height)/4);
-    color: rgb(35, 67, 94);
+    --tx_primary: #23435e;
+    --tx_secondary: rgb(74, 88, 95);
+    --bg_primary: #175C8A;
+    color: var(--tx_primary);
     font-size: medium;
     margin: 0px;
     padding: 0px;
@@ -18,14 +21,12 @@ body {
     background-size: cover;
     background-color: #b6e2f8;
     background-image:
-        radial-gradient(at 40% 20%, rgb(100, 165, 218) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, rgb(90, 203, 255) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, rgb(154, 225, 247) 0px, transparent 50%),
+        radial-gradient(at 40% 20%, rgb(96, 153, 200) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, rgb(144, 207, 236) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, rgb(165, 197, 207) 0px, transparent 50%),
         radial-gradient(at 80% 50%, rgb(98, 191, 197) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgb(127, 215, 224) 0px, transparent 50%),
-        radial-gradient(at 80% 100%, rgb(249, 249, 255) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, rgb(141, 159, 207) 0px, transparent 50%),
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='10' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        radial-gradient(at 0% 100%, rgb(55, 218, 236) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, rgb(133, 155, 215) 0px, transparent 50%),
 }
 
 html, body {
@@ -61,7 +62,32 @@ body {
 
 h2 {
     margin: 0px;
+    font-family: "BioRhyme", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
 }
+
+h3 {
+    margin: 0px;
+    font-family: "BioRhyme", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+/*
+font-family: "Abril Fatface", serif;
+ font-family: "Zilla Slab", serif;
+ font-family: "BioRhyme", serif;
+ */
 
 p {
     margin: 0px;
@@ -136,35 +162,54 @@ a {
 .overview {
     margin-top: 10px;
     margin-bottom: 3px;
-    color: rgb(35, 67, 94, 0.7);
-    font-size: small;
+    color: var(--tx_secondary);
+    font-size: medium;
 }
 
 .tags {
-    color: rgb(35, 67, 94, 0.7);
+    color: var(--tx_secondary);
     font-size: small;
 }
 
 .modal {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
+    height: 0;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: white;
+    transition: .5s ease;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 30px;
-    width: 80%;
+.cls_btn_container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.modal .close {
+    float: none;
+    font-size: xx-large;
+}
+
+.mdl_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 100px;
+    margin-top: 20px;
+}
+
+.modal h2 {
+    font-size: xxx-large;
+}
+
+.modal h3 {
+    margin: 10px;
 }
 
 #menu {
@@ -252,25 +297,18 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #45afd9;
-    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -10px -10px 20px 0px rgb(81, 161, 235), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    background-color: var(--bg_primary);
+    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -10px -10px 20px 0px rgb(43, 96, 146), inset 0px 11px 28px 0px rgb(255, 255, 255);
     backdrop-filter: blur(5px);
     border: 0px;
     color: white;
     /*cursor: pointer;*/
 }
 
-.open_hovered {
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #45afd9;
-    transform: scale(105%);
+.btn_hovered {
+    transform: scale(110%);
     transition: .2s;
-    border-radius: 50%;
-    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -5px -5px 20px 0px rgb(51, 132, 208), inset 0px 5px 15px 0px rgb(51, 132, 208);
-    backdrop-filter: blur(5px);
+    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -5px -5px 20px 0px rgb(43, 96, 146), inset 0px 5px 15px 0px rgb(43, 96, 146);
 }
 
 #me .open {
@@ -323,8 +361,9 @@ a {
     left: 5px;
     border-radius: 30px;
     box-shadow: 0 0 5px rgb(0 0 0 / 20%);
-    background-color: #37a2cd;
-    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -10px -10px 20px 0px rgb(51, 132, 208), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    background-color: var(--bg_primary);
+    color: white;
+    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -10px -10px 20px 0px rgb(43, 96, 146), inset 0px 11px 28px 0px rgb(255, 255, 255);
     backdrop-filter: blur(5px);
     content: ' ';
     transition: left .4s;
@@ -335,7 +374,7 @@ a {
 }
 
 .dot:hover {
-    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -5px -5px 20px 0px rgb(51, 132, 208), inset 0px 5px 15px 0px rgb(51, 132, 208);
+    box-shadow: 35px 35px 80px 0px rgba(145, 192, 255, 0.5), inset -5px -5px 20px 0px rgb(43, 96, 146), inset 0px 5px 15px 0px rgb(43, 96, 146);
     transform: scale(105%);
     transition: .2s;
 }
@@ -365,7 +404,8 @@ a {
 }
 
 #blog {
-    background-image: url("img/blog/thm.png");
+    background-image: url("img/blog/thm.gif");
+    background-size: 90%;
     background-position: 50% 70%;
 }
 
@@ -375,7 +415,7 @@ a {
 }
 
 #reftion {
-    background-image: url("img/reftion/thm.png");
+    background-image: url("img/reftion/thm.gif");
     background-size: 90%;
 }
 
@@ -385,13 +425,10 @@ a {
 }
 
 #folio {
-    background-image: url("img/folio/thm.png");
+    background-image: url("img/folio/thm.gif");
     background-size: 50%;
 }
 
-.work>.content {
-    display: none;
-}
 
 #contacts.grid-container {
     grid-template-columns: 1fr 1fr;
@@ -476,7 +513,7 @@ a {
 }
 
 .artist-name {
-    color: rgb(35, 67, 94, 0.7);
+    color: var(--tx_secondary);
     font-size: x-small;
 }
 
@@ -526,7 +563,7 @@ a {
 }
 
 #blog {
-    order: 1;
+    order: 3;
 }
 
 #fluentry {
@@ -534,11 +571,32 @@ a {
 }
 
 #libft {
-    order: 3;
+    order: 1;
 }
 
 #alert {
     display: none;
+}
+
+.visually-hidden {
+    position: fixed !important;
+    /* keep it on viewport */
+    top: 0px !important;
+    left: 0px !important;
+    /* give it non-zero size, VoiceOver on Safari requires at least 2 pixels
+     before allowing buttons to be activated. */
+    width: 4px !important;
+    height: 4px !important;
+    /* visually hide it with overflow and opacity */
+    opacity: 0 !important;
+    overflow: hidden !important;
+    /* remove any margin or padding */
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* ensure no other style sets display to none */
+    display: block !important;
+    visibility: visible !important;
 }
 
 
@@ -547,18 +605,16 @@ a {
         height: auto;
     }
 
-    #main {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0;
-        grid-auto-rows: 100px;
-        margin-left: 20px;
-        margin-right: 20px;
-        gap: 20px;
-        padding-top: 20px;
-    }
-
     .overview {
         margin-top: 5px;
+    }
+
+    .mdl_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 50px;
+        margin-top: 20px;
     }
 
     #menu {
@@ -580,13 +636,23 @@ a {
     #header {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        height: 500px;
+        height: 600px;
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 10px;
         gap: 20px;
         padding-top: 20px;
         box-sizing: border-box;
+    }
+
+    #main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-auto-rows: 200px;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+        padding-top: 20px;
     }
 
 
@@ -616,37 +682,28 @@ a {
     #libft {
         grid-column: span 4;
         background-size: 10%;
-        order: 3;
     }
 
     #fluentry {
         grid-column: span 2;
-        grid-row: span 2;
-        order: 4;
+        grid-row: 1;
     }
 
     #blog {
         grid-column: span 2;
-        grid-row: span 2;
-        order: 1;
     }
 
     #reftion {
         grid-column: span 2;
-        grid-row: span 2;
-        order: 1;
+        grid-row: 1;
     }
 
     #folio {
         grid-column: span 2;
-        grid-row: span 2;
-        order: 4;
     }
 
     #contacts {
         grid-column: span 3;
-        grid-row: span 2;
-        order: 2;
     }
 
     #contacts.grid-container {
@@ -662,8 +719,6 @@ a {
 
     #spotify {
         grid-column: span 4;
-        grid-row: span 3;
-        order: 5;
     }
 
     #songs.grid-container {
@@ -675,11 +730,6 @@ a {
         display: grid;
         grid-template-columns: 1fr 2fr 4fr;
         grid-template-rows: 1fr;
-    }
-
-    #lang {
-        grid-row: span 2;
-        order: 2;
     }
 
     .toggle {

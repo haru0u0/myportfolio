@@ -1,6 +1,11 @@
 // lang switch
-var selected_lang = "jp";
-window.addEventListener("load", function () {
+var selected_lang = "en";
+var response;
+var contents;
+
+window.addEventListener("load", async function () {
+  response = await fetch("content.json");
+  contents = await response.json();
   setLang(selected_lang);
 });
 
@@ -13,39 +18,48 @@ document.querySelector("input").addEventListener("change", function () {
   setLang(selected_lang);
 });
 
-async function setLang(selected_lang) {
-  const response = await fetch("content.json");
-  const contents = await response.json();
-  var grid_item2 = document.querySelectorAll(".withtext");
+function setLang(selected_lang) {
+  var mdl_h3 = document.querySelectorAll(".modal>.mdl_content h3");
+  var mdl_p = document.querySelectorAll(".modal>.mdl_content p");
   var toggle_lang = document.querySelector("#selected_lang");
-  var indx_grid2 = 0;
+  var grid_withtext = document.querySelectorAll(".withtext");
+  var i_grid_withtext = 0;
+  var i_mdl = 0;
 
   //design toggle
   toggle_lang.innerHTML = selected_lang.toUpperCase();
 
-  //set content
-  while (indx_grid2 < grid_item2.length) {
-    var title = grid_item2[indx_grid2].getAttribute("id");
+  //set content  -grid items
+  while (i_grid_withtext < grid_withtext.length) {
+    var title = grid_withtext[i_grid_withtext].getAttribute("id");
     var indx_content = 0;
-    while (indx_content < grid_item2.length) {
+    while (indx_content < grid_withtext.length) {
       if (title == contents.overviews[indx_content].title) {
-        grid_item2[indx_grid2].querySelector(".overview").innerHTML =
-          contents.overviews[indx_grid2][selected_lang];
+        grid_withtext[i_grid_withtext].querySelector(".overview").innerHTML =
+          contents.overviews[i_grid_withtext][selected_lang];
       }
       indx_content++;
     }
-    indx_grid2++;
+    i_grid_withtext++;
+  }
+
+  //set content -modal
+  while (i_mdl < mdl_h3.length) {
+    mdl_h3[i_mdl].innerHTML = contents.modal_h3[i_mdl][selected_lang];
+    mdl_p[i_mdl].innerHTML = contents.modal_p[i_mdl][selected_lang];
+    i_mdl++;
   }
 }
 
 //add open button interaction
 var btn_open = document.querySelectorAll(".open");
+var btn_open_me = document.querySelector(" #me .open");
 var modal = document.querySelector(".modal");
 var btn_close = document.querySelector(".close");
 var indx_btn = 0;
 
 function icon_hover() {
-  this.classList.add("fa-shake", "open_hovered");
+  this.classList.add("btn_hovered");
 }
 
 function icon_hover_bind() {
@@ -57,17 +71,24 @@ while (indx_btn < btn_open.length) {
   btn_open[indx_btn].addEventListener("mouseover", icon_hover_bind);
 
   btn_open[indx_btn].addEventListener("mouseout", function (e) {
-    this.classList.remove("fa-shake", "open_hovered");
+    this.classList.remove("btn_hovered");
   });
 
+  /*
   btn_open[indx_btn].addEventListener("click", function (e) {
-    modal.style.display = "block";
+    modal.style.height = "100%";
   });
+  */
   indx_btn++;
 }
 
+btn_open_me.addEventListener("click", function () {
+  console.log(modal);
+  modal.style.height = "100%";
+});
+
 btn_close.addEventListener("click", function () {
-  modal.style.display = "none";
+  modal.style.height = "0";
 });
 
 //hover animation for grid-items
@@ -79,7 +100,8 @@ function grid_hover() {
   var children = this.querySelectorAll("*");
   var children_index = 0;
   while (children_index < children.length) {
-    children[children_index].style.display = "block";
+    children[children_index].classList.remove("visually-hidden");
+    //children[children_index].style.display = "block";
     children_index++;
   }
   this.style.backgroundImage = "none";
@@ -97,24 +119,6 @@ while (work_grid_items_index < work_grid_items.length) {
   work_grid_items_index++;
 }
 
-/*
-while (work_grid_items_index < work_grid_items.length) {
-  work_grid_items[work_grid_items_index].addEventListener(
-    "mouseover", 
-    function () {
-      var children = this.querySelectorAll("*");
-      var children_index = 0;
-      while (children_index < children.length) {
-        children[children_index].style.display = "block";
-        children_index++;
-      }
-      this.style.backgroundImage = "none";
-    }
-  );
-  work_grid_items_index++;
-}
-*/
-
 work_grid_items_index = 0;
 
 while (work_grid_items_index < work_grid_items.length) {
@@ -124,7 +128,8 @@ while (work_grid_items_index < work_grid_items.length) {
       var children = this.querySelectorAll(".content>*");
       var children_index = 0;
       while (children_index < children.length) {
-        children[children_index].style.display = "none";
+        //children[children_index].style.display = "none";
+        children[children_index].classList.add("visually-hidden");
         children_index++;
       }
       this.style.backgroundImage = "";
@@ -132,12 +137,6 @@ while (work_grid_items_index < work_grid_items.length) {
   );
   work_grid_items_index++;
 }
-
-/*
-document.querySelector("#me").addEventListener("mouseout", function () {
-    document.querySelector("#me>*").style.display = "none";
-});
-*/
 
 //filtering
 
@@ -158,7 +157,7 @@ while (indx_menu < btn_menu.length) {
 
     while (indx_grid < grid_item.length) {
       grid_item[indx_grid].classList.remove("grid-item-unselected");
-      var btn_open = grid_item[indx_grid].querySelector(".open");
+      var btn_open = grid_item[indx_grid].querySelector("button");
       if (btn_open != null && btn_open.hasAttribute("disabled")) {
         btn_open.removeAttribute("disabled");
         btn_open.addEventListener("mouseover", icon_hover_bind);

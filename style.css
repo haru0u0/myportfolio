@@ -24,8 +24,8 @@ body {
     background-size: cover;
     background-color: #b6e2f8;
     animation-name: fadeInAnime;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-duration:
+        animation-fill-mode: forwards;
     opacity: 0;
 }
 

@@ -1,8 +1,5 @@
 :root {
-    --menu-height: 5vh;
     --footer-height: 5vh;
-    --main-height: calc(100% - var(--menu-height) - var(--footer-height));
-    --grid-height: calc(var(--main-height)/4);
     --tx_primary: #23435e;
     --tx_secondary: rgb(74, 88, 95);
     --bg_primary: #175C8A;
@@ -10,6 +7,10 @@
     font-size: medium;
     margin: 0px;
     padding: 0px;
+}
+
+html, body {
+    height: 100%;
 }
 
 body {
@@ -20,20 +21,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-color: #b6e2f8;
-    background-image:
-        radial-gradient(at 40% 20%, rgb(96, 153, 200) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, rgb(144, 207, 236) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, rgb(165, 197, 207) 0px, transparent 50%),
-        radial-gradient(at 80% 50%, rgb(98, 191, 197) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgb(55, 218, 236) 0px, transparent 50%),
-        radial-gradient(at 0% 0%, rgb(133, 155, 215) 0px, transparent 50%),
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
     animation-name: fadeInAnime;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -83,12 +70,6 @@ button {
     font-family: inherit;
 }
 
-/*
-font-family: "Abril Fatface", serif;
- font-family: "Zilla Slab", serif;
- font-family: "BioRhyme", serif;
- */
-
 p {
     margin: 0px;
 }
@@ -112,8 +93,6 @@ a {
     padding: 20px;
     border-radius: 30px;
 }
-
-.two-by-two {}
 
 .two-by-one {
     grid-column: span 2;
@@ -217,7 +196,7 @@ a {
     grid-template-rows: 1fr;
     margin-left: 100px;
     margin-right: 100px;
-    height: var(--menu-height);
+    height: 50px;
     padding-top: 10px;
     box-sizing: border-box;
 }
@@ -580,27 +559,21 @@ a {
 
 .visually-hidden {
     position: fixed !important;
-    /* keep it on viewport */
     top: 0px !important;
     left: 0px !important;
-    /* give it non-zero size, VoiceOver on Safari requires at least 2 pixels
-     before allowing buttons to be activated. */
     width: 4px !important;
     height: 4px !important;
-    /* visually hide it with overflow and opacity */
     opacity: 0 !important;
     overflow: hidden !important;
-    /* remove any margin or padding */
     border: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    /* ensure no other style sets display to none */
     display: block !important;
     visibility: visible !important;
 }
 
 
-@media (max-width: 1280px) {
+@media (max-width: 920px) {
     html, body {
         height: auto;
     }

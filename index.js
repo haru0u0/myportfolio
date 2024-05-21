@@ -83,7 +83,6 @@ while (indx_btn < btn_open.length) {
 }
 
 btn_open_me.addEventListener("click", function () {
-  console.log(modal);
   modal.style.height = "100%";
 });
 

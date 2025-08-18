@@ -17,7 +17,7 @@ xhr.onload = () => {
     //request on-repeat playlist with the access token
     xhr2.open(
       "GET",
-      "https://api.spotify.com/v1/playlists/37i9dQZF1EpnwLIi2JsXOl?fields=tracks.items%28track%28album.images.url%2C+artists.name%2C+name%2Cpreview_url%29"
+      "https://api.spotify.com/v1/playlists/3BUb4P8KXbD6UHBxqIkimQ?fields=tracks.items%28track%28album.images.url%2C+artists.name%2C+name%2Cpreview_url%29"
     );
     xhr2.setRequestHeader(
       "Authorization",
